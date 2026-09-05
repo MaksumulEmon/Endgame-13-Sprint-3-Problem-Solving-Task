@@ -3,7 +3,7 @@ var containsDuplicate = function (nums) {
     return new Set(nums).size !== nums.length;
 };
 
-console.log(containsDuplicate([1, 2, 3]));
+// console.log(containsDuplicate([1, 2, 3]));
 
 
 // 02. Move Zeroes
@@ -23,9 +23,9 @@ var moveZeroes = function (nums) {
     }
 };
 
-let nums = [0, 1, 0, 3, 12];
-moveZeroes(nums);
-console.log(nums);
+// let nums = [0, 1, 0, 3, 12];
+// moveZeroes(nums);
+// console.log(nums);
 
 
 
@@ -38,7 +38,7 @@ var isAnagram = function (s, t) {
     return s.split('').sort().join('') === t.split('').sort().join('');
 };
 
-console.log(isAnagram("anagram", "nagaram"));
+// console.log(isAnagram("anagram", "nagaram"));
 
 
 
@@ -60,7 +60,7 @@ var canConstruct = function (ransomNote, magazine) {
 
     return true;
 };
-console.log(canConstruct("aa", "aab"));
+// console.log(canConstruct("aa", "aab"));
 
 
 
@@ -77,9 +77,9 @@ var majorityElement = function (nums) {
     }
 };
 
-const nums1 = [2, 2, 1, 1, 1, 2, 2];
+// const nums1 = [2, 2, 1, 1, 1, 2, 2];
 
-console.log(majorityElement(nums1));
+// console.log(majorityElement(nums1));
 
 
 
@@ -113,7 +113,7 @@ var threeSum = function (nums) {
     return result;
 };
 
-console.log(threeSum([-1, 0, 1, 2, -1, -4]));
+// console.log(threeSum([-1, 0, 1, 2, -1, -4]));
 
 
 
@@ -135,7 +135,7 @@ var subarraySum = function (nums, k) {
     return count;
 };
 
-console.log(subarraySum([1, 1, 1], 2));
+// console.log(subarraySum([1, 1, 1], 2));
 
 
 
@@ -157,7 +157,7 @@ var topKFrequent = function (nums, k) {
     // Return top k elements
     return sorted.slice(0, k).map(Number);
 };
-console.log(topKFrequent([1, 1, 1, 2, 2, 3], 2));
+// console.log(topKFrequent([1, 1, 1, 2, 2, 3], 2));
 
 
 
@@ -186,7 +186,7 @@ var longestConsecutive = function (nums) {
     return longest;
 };
 
-console.log(longestConsecutive([100, 4, 200, 1, 3, 2]));
+// console.log(longestConsecutive([100, 4, 200, 1, 3, 2]));
 
 
 
@@ -211,8 +211,8 @@ var sortColors = function (nums) {
     }
 };
 
-const nums3 = [3, 0, 3, 1, 1, 0];
+// const nums3 = [3, 0, 3, 1, 1, 0];
 
-sortColors(nums3);
+// sortColors(nums3);
 
-console.log(nums3);
+// console.log(nums3);
