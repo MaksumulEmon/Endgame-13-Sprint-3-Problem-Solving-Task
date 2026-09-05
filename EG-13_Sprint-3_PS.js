@@ -41,6 +41,7 @@ var isAnagram = function (s, t) {
 console.log(isAnagram("anagram", "nagaram"));
 
 
+
 // 04.Ransom Note
 var canConstruct = function (ransomNote, magazine) {
     let count = new Map();
@@ -60,3 +61,22 @@ var canConstruct = function (ransomNote, magazine) {
     return true;
 };
 console.log(canConstruct("aa", "aab"));
+
+
+
+// 05. Majority Element
+var majorityElement = function(nums) {
+    let count = {};
+
+    for (let num of nums) {
+        count[num] = (count[num] || 0) + 1;
+
+        if (count[num] > nums.length / 2) {
+            return num;
+        }
+    }
+};
+
+const nums1 = [2, 2, 1, 1, 1, 2, 2];
+
+console.log(majorityElement(nums1));
