@@ -1,15 +1,13 @@
 // 01. Contains Duplicate
-var containsDuplicate = function(nums) {
+var containsDuplicate = function (nums) {
     return new Set(nums).size !== nums.length;
 };
 
 console.log(containsDuplicate([1, 2, 3]));
 
 
-
-
 // 02. Move Zeroes
-var moveZeroes = function(nums) {
+var moveZeroes = function (nums) {
     let index = 0;
 
     for (let i = 0; i < nums.length; i++) {
@@ -32,7 +30,7 @@ console.log(nums);
 
 
 // 03. Valid Anagram
-var isAnagram = function(s, t) {
+var isAnagram = function (s, t) {
     if (s.length !== t.length) {
         return false;
     }
@@ -41,3 +39,24 @@ var isAnagram = function(s, t) {
 };
 
 console.log(isAnagram("anagram", "nagaram"));
+
+
+// 04.Ransom Note
+var canConstruct = function (ransomNote, magazine) {
+    let count = new Map();
+
+    for (let char of magazine) {
+        count.set(char, (count.get(char) || 0) + 1);
+    }
+
+    for (let char of ransomNote) {
+        if (!count.get(char)) {
+            return false;
+        }
+
+        count.set(char, count.get(char) - 1);
+    }
+
+    return true;
+};
+console.log(canConstruct("aa", "aab"));
