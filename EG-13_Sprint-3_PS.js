@@ -1,5 +1,4 @@
 // 01. Contains Duplicate
-
 var containsDuplicate = function(nums) {
     return new Set(nums).size !== nums.length;
 };
@@ -27,7 +26,18 @@ var moveZeroes = function(nums) {
 };
 
 let nums = [0, 1, 0, 3, 12];
-
 moveZeroes(nums);
-
 console.log(nums);
+
+
+
+// 03. Valid Anagram
+var isAnagram = function(s, t) {
+    if (s.length !== t.length) {
+        return false;
+    }
+
+    return s.split('').sort().join('') === t.split('').sort().join('');
+};
+
+console.log(isAnagram("anagram", "nagaram"));
