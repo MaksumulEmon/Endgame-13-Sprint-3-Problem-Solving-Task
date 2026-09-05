@@ -84,7 +84,6 @@ console.log(majorityElement(nums1));
 
 
 // 06. 3Sum
-
 var threeSum = function (nums) {
     let result = [];
     nums.sort((a, b) => a - b);
@@ -115,3 +114,25 @@ var threeSum = function (nums) {
 };
 
 console.log(threeSum([-1, 0, 1, 2, -1, -4]));
+
+
+
+// 07. Subarray Sum Equals K
+var subarraySum = function (nums, k) {
+    let count = 0, sum = 0;
+    let map = new Map([[0, 1]]);
+
+    for (let num of nums) {
+        sum += num;
+
+        if (map.has(sum - k)) {
+            count += map.get(sum - k);
+        }
+
+        map.set(sum, (map.get(sum) || 0) + 1);
+    }
+
+    return count;
+};
+
+console.log(subarraySum([1, 1, 1], 2));
