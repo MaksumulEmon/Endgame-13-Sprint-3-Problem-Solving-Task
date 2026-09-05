@@ -187,3 +187,32 @@ var longestConsecutive = function (nums) {
 };
 
 console.log(longestConsecutive([100, 4, 200, 1, 3, 2]));
+
+
+
+
+// 10. Sort Colors
+var sortColors = function (nums) {
+    let low = 0;
+    let mid = 0;
+    let high = nums.length - 1;
+
+    while (mid <= high) {
+        if (nums[mid] === 0) {
+            [nums[low], nums[mid]] = [nums[mid], nums[low]];
+            low++;
+            mid++;
+        } else if (nums[mid] === 1) {
+            mid++;
+        } else {
+            [nums[mid], nums[high]] = [nums[high], nums[mid]];
+            high--;
+        }
+    }
+};
+
+const nums3 = [3, 0, 3, 1, 1, 0];
+
+sortColors(nums3);
+
+console.log(nums3);
